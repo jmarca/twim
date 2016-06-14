@@ -8,9 +8,13 @@
   },
   "scripts": {
     "test": "tap"
-      ,"install" : "sqitch deploy ${SQITCH_DB_URI}"
-      ,"uninstall" : "sqitch revert ${SQITCH_DB_URI}"
+      ,"install":"sqitch deploy ${SQITCH_DB_URI}"
+      ,"preuninstall" : "sqitch revert ${SQITCH_DB_URI}"
   },
+    "dependencies":{
+        "calvad_db_geoextensions":"jmarca/calvad_db_geoextensions",
+        "calvad_detectors_schema":"jmarca/calvad_detectors_schema"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jmarca/twim.git"
